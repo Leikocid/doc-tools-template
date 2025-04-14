@@ -16,17 +16,36 @@
 - `build.py` - основной скрипт для сборки и конвертации документов
 - `.vscode/tasks.json` - настройки задач VS Code
 
+## Использование шаблона
+
+### Клонировать шаблон
+```
+git clone https://github.com/Leikocid/doc-tools-template.git Имя-нового-проекта
+```
+
+### Удалить привязку к исходному репозиторию
+```
+cd Имя-нового-проекта && rm -rf .git
+```
+
+### Инициализировать чистый Git-репозиторий
+```
+git init
+git add .
+git commit -m "Initial commit"
+```
+
+
 ## Установка
 
-1. Клонируйте репозиторий
-2. Создайте виртуальное окружение Python:
+1. Создайте виртуальное окружение Python:
    ```
    python -m venv .venv
    ```
-3. Активируйте виртуальное окружение:
+2. Активируйте виртуальное окружение:
    - Windows: `.venv\Scripts\activate`
    - macOS/Linux: `source .venv/bin/activate`
-4. Установите зависимости:
+3. Установите зависимости:
    ```
    pip install -r requirements.txt
    ```
