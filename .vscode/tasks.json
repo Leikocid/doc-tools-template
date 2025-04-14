@@ -1,0 +1,73 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Сборка документации",
+      "type": "shell",
+      "command": "./.venv/bin/python build.py",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "clear": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "MD → DOCX (Текущий файл)",
+      "type": "shell",
+      "command": "./.venv/bin/python",
+      "args": [
+        "build.py",
+        "--convert2docx",
+        "${file}"
+      ],
+      "windows": {
+        "command": "./.venv/Scripts/python.exe",
+        "args": [
+          "build.py",
+          "--convert2docx",
+          "${file}"
+        ]
+      },
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "clear": true
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "runOn": "folderOpen"
+      }
+    },
+    {
+      "label": "PDF → MD (Текущий файл)",
+      "type": "shell",
+      "command": "./.venv/bin/python",
+      "args": [
+        "build.py",
+        "--convert2md",
+        "${file}"
+      ],
+      "windows": {
+        "command": "./.venv/Scripts/python.exe",
+        "args": [
+          "build.py",
+          "--convert2md",
+          "${file}"
+        ]
+      },
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "clear": true
+      },
+      "problemMatcher": []
+    }
+  ]
+} 

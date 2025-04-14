@@ -1,0 +1,25 @@
+# Виртуальное окружение Python
+.venv/
+venv/
+env/
+
+# Python кэш
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Сгенерированные документы
+generated/*
+!generated/.gitkeep
+!generated/README.md
+
+# Игнорируем документы пользователя, кроме примеров
+sources/*
+!sources/.gitkeep
+!sources/example.md
+
+# Другие файлы
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/tasks.json 
